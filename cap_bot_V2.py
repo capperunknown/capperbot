@@ -137,7 +137,7 @@ async def commands(ctx):
 **$pfp @user**: Makes me show the tagged user's pfp
 **$purge amount**: I will purge the last given amount of messages in the current channel""", color=0xb406cb)
     #embed.add_field(name="Gentle Reminder", value="""Most of my commands require special permissions. If a command doesn't work for you it means you're a peasant""", inline=False)
-    embed.set_footer(text="Cap_Bot", icon_url="https://cdn.discordapp.com/emojis/813683190664790048.png?v=1")
+    embed.set_footer(text="Cap_Bot", icon_url="https://cdn.discordapp.com/emojis/835398771491733515.png?v=1")
     await ctx.send(embed=embed)
 
 
