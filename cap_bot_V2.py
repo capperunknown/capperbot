@@ -117,6 +117,7 @@ async def announce(ctx, *, text):
     
 @bot.command(pass_context = True)
 async def purge(ctx, number):
+    member = ctx.message.author
     DNC = discord.utils.find(lambda r: r.name == 'Does Not Cap', ctx.message.author.guild.roles)
     admins = discord.utils.find(lambda r: r.name == 'Admins', ctx.message.author.guild.roles)
     
