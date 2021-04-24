@@ -135,8 +135,7 @@ async def commands(ctx):
 **$downbad @user**: Assigns the tagged user the Downbad role
 **$timeout @user**: Assigns the tagged user the Retard Alert role
 **$pfp @user**: Makes me show the tagged user's pfp
-**$purge amount**: I will purge the last given amount of messages in current channel
-Because I'm an asshole, I also call out users who mention 'Fortnite'""", color=0xb406cb)
+**$purge amount**: I will purge the last given amount of messages in the current channel""", color=0xb406cb)
     #embed.add_field(name="Gentle Reminder", value="""Most of my commands require special permissions. If a command doesn't work for you it means you're a peasant""", inline=False)
     embed.set_footer(text="Cap_Bot", icon_url="https://cdn.discordapp.com/emojis/813683190664790048.png?v=1")
     await ctx.send(embed=embed)
