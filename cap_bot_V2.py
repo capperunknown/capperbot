@@ -2,7 +2,7 @@ import discord
 from discord.ext.commands import Bot
 from discord.utils import get
 
-TOKEN = 'ODE0MjU3NjQxOTQ5ODg4NTkz.YDbOhg.DtiGZZdqbwSOmdP38gpANj3nLrs'
+TOKEN = 'ODE0MjU3NjQxOTQ5ODg4NTkz.YDbOhg.MafbU8qZJImtm30ETatqvqGFlTw'
 bot = Bot(command_prefix='$')
 
 
