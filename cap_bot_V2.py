@@ -29,8 +29,8 @@ async def on_ready():
 async def on_message(message):
     if message.author == bot.user:
         return
-    if message.content.startswith('<:angry_penis:813683190664790048>'):
-        await message.channel.send('<:angry_penis:813683190664790048>')
+    if message.content.startswith('<:angry_penis:835415989642199070>'):
+        await message.channel.send('<:angry_penis:835415989642199070>')
         
     author=message.author
     if('fortnite' in message.content or 'Fortnite' in message.content):
@@ -100,7 +100,7 @@ async def downbad(ctx, user: discord.Member):
 @bot.command()
 async def penis(ctx):
     await ctx.message.delete()
-    await ctx.send("<:angry_penis:835414254555365386>")
+    await ctx.send("<:angry_penis:835415989642199070>")
     
 
 @bot.command()
@@ -116,7 +116,7 @@ async def announce(ctx, *, text):
 @bot.command()
 async def commands(ctx):
     embed=discord.Embed(title="Here are my commands", description="""
-**$penis**: Makes me respond with the <:angry_penis:835414254555365386> emoji
+**$penis**: Makes me respond with the <:angry_penis:835415989642199070> emoji
 **$simp @user**: Makes me respond with the tagged user followed by 'is a ***SIMP*** '
 **$downbad @user**: Assigns the tagged user the Downbad role
 **$timeout @user**: Assigns the tagged user the Retard Alert role
