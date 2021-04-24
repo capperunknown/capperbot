@@ -4,7 +4,7 @@ from discord.utils import get
 
 TOKEN = 'ODE0MjU3NjQxOTQ5ODg4NTkz.YDbOhg.MafbU8qZJImtm30ETatqvqGFlTw'
 bot = Bot(command_prefix='$')
-
+#test from vscode
 
 @bot.event
 async def on_ready():
