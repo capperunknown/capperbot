@@ -124,6 +124,8 @@ async def purge(ctx, number):
     if(DNC in member.roles or admins in member.roles):
         await ctx.channel.purge(limit=int(number))
         await ctx.send("{} messages were purged.".format(number))
+    else:
+        await ctx.send("Cannot Purge: Invalid Permissions")
 
 @bot.command()
 async def commands(ctx):
