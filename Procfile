@@ -1,0 +1,1 @@
+worker: python cap_bot_V1.py
