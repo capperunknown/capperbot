@@ -2,7 +2,7 @@ import discord
 from discord.ext.commands import Bot
 from discord.utils import get
 
-TOKEN = 'ODE0MjU3NjQxOTQ5ODg4NTkz.YDbOhg.MafbU8qZJImtm30ETatqvqGFlTw'
+TOKEN = 'ODE0MjU3NjQxOTQ5ODg4NTkz.YDbOhg.DtiGZZdqbwSOmdP38gpANj3nLrs'
 bot = Bot(command_prefix='$')
 
 
@@ -89,10 +89,10 @@ async def downbad(ctx, user: discord.Member):
         else:         
             if(role in user.roles):
                 await  user.remove_roles(role)
-                await ctx.send("<@{}> is down horrendously".format(ident))
+                await ctx.send("<@{}> has come to their senses".format(ident))
             else:
                 await  user.add_roles(role)
-                await ctx.send("<@{}> has come to their senses".format(ident))
+                await ctx.send("<@{}> is down horrendously".format(ident))
     else:
         await ctx.send("Request to Change Role Denied: Invalid Permissions")
 
@@ -125,6 +125,7 @@ Because I'm an asshole, I also call out users who mention 'Fortnite'""", color=0
     #embed.add_field(name="Gentle Reminder", value="""Most of my commands require special permissions. If a command doesn't work for you it means you're a peasant""", inline=False)
     embed.set_footer(text="Cap_Bot", icon_url="https://cdn.discordapp.com/emojis/813683190664790048.png?v=1")
     await ctx.send(embed=embed)
+
 
 bot.run(TOKEN)
         
