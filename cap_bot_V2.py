@@ -12,6 +12,7 @@ async def on_ready():
     print(bot.user.name)
     print(bot.user.id)
     print('------')
+    print('CAPPER BOT IS NOW ACTIVE')
 
     # Setting `Playing ` status
     #await bot.change_presence(activity=discord.Game(name="a game"))
@@ -20,7 +21,7 @@ async def on_ready():
     #await bot.change_presence(activity=discord.Streaming(name="My Stream", url=my_twitch_url))
 
     # Setting `Listening ` status
-    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="your bullshit"))
+    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="$commands"))
 
     # Setting `Watching ` status
     #await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name="a movie"))
@@ -130,7 +131,6 @@ async def purge(ctx, number):
 @bot.command()
 async def commands(ctx):
     embed=discord.Embed(title="Here are my commands", description="""
-**$penis**: Makes me respond with the <:angry_penis:835398771491733515> emoji
 **$simp @user**: Makes me respond with the tagged user followed by 'is a ***SIMP***'
 **$downbad @user**: Assigns the tagged user the Downbad role
 **$timeout @user**: Assigns the tagged user the Retard Alert role
