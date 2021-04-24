@@ -108,10 +108,25 @@ async def pfp(ctx, user: discord.Member):
     ident = user.id
     pfp = user.avatar_url
     await ctx.send("Here is <@{}>'s pfp {}".format(ident,pfp))
-
+    
+@bot.command()
 async def announce(ctx, *, text):
     await ctx.message.delete()
     await ctx.send(text)
+    
+    
+@Client.command(pass_context = True)
+async def purge(ctx, number):
+    DNC = discord.utils.find(lambda r: r.name == 'Does Not Cap', ctx.message.author.guild.roles)
+    admins = discord.utils.find(lambda r: r.name == 'Admins', ctx.message.author.guild.roles)
+    
+    if(DNC in member.roles or admins in member.roles):
+        
+        mgs = [] #Empty list to put all the messages in the log
+        number = int(number) #Converting the amount of messages to delete to an integer
+        async for x in Client.logs_from(ctx.message.channel, limit = number):
+            mgs.append(x)
+        await Client.delete_messages(mgs)
 
 @bot.command()
 async def commands(ctx):
