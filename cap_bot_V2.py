@@ -122,12 +122,8 @@ async def purge(ctx, number):
     admins = discord.utils.find(lambda r: r.name == 'Admins', ctx.message.author.guild.roles)
     
     if(DNC in member.roles or admins in member.roles):
-        
-        mgs = [] #Empty list to put all the messages in the log
-        number = int(number) #Converting the amount of messages to delete to an integer
-        async for x in bot.logs_from(ctx.message.channel, limit = number):
-            mgs.append(x)
-        await bot.delete_messages(mgs)
+        await ctx.channel.purge(limit=int(number))
+        await ctx.send("{} were messages purged".format(number)
 
 @bot.command()
 async def commands(ctx):
