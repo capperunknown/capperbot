@@ -123,7 +123,7 @@ async def purge(ctx, number):
     
     if(DNC in member.roles or admins in member.roles):
         await ctx.channel.purge(limit=int(number))
-        await ctx.send("{} were messages purged".format(number)
+        await ctx.send("{} were messages purged".format(number))
 
 @bot.command()
 async def commands(ctx):
