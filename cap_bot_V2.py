@@ -114,6 +114,14 @@ async def pfp(ctx, user: discord.Member):
 async def announce(ctx, *, text):
     await ctx.message.delete()
     await ctx.send(text)
+
+@bot.command()
+async def associates(ctx):
+    guild = ctx.guild.id
+    for member in guild.Members:
+        ident = member.id
+        if(ident!=591065765185191983):
+            await member.edit(nick='TEST')
     
     
 @bot.command(pass_context = True)
