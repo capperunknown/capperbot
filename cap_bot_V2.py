@@ -13,7 +13,6 @@ async def on_ready():
     print(bot.user.id)
     print('------')
     print('CAPPER BOT IS NOW ACTIVE')
-
     # Setting `Playing ` status
     #await bot.change_presence(activity=discord.Game(name="a game"))
 
@@ -117,10 +116,9 @@ async def announce(ctx, *, text):
 
 @bot.command()
 async def associates(ctx):
-    guild = ctx.guild.id
+    guild = bot.get_guild(809500009124855878)
     for member in guild.Members:
-        ident = member.id
-        if(ident!=591065765185191983):
+        if(member!=591065765185191983):
             await member.edit(nick='TEST')
     
     
