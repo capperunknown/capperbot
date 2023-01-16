@@ -2,7 +2,7 @@ import discord
 from discord.ext.commands import Bot
 from discord.utils import get
 
-TOKEN = 'ODE0MjU3NjQxOTQ5ODg4NTkz.YDbOhg.MafbU8qZJImtm30ETatqvqGFlTw'
+TOKEN = 'ADD TOKEN HERE'
 bot = Bot(command_prefix='$')
 #test from vscode
 
@@ -29,21 +29,21 @@ async def on_ready():
 async def on_message(message):
     if message.author == bot.user:
         return
-    if message.content.startswith('<:angry_penis:835398771491733515>'):
-        await message.channel.send('<:angry_penis:835398771491733515>')
+    if message.content.startswith('<:angry:835398771491733515>'):
+        await message.channel.send('<:angry:835398771491733515>')
         
     author=message.author
     if('fortnite' in message.content or 'Fortnite' in message.content):
-        await message.channel.send("<@{}> imagine playing fortnite :clown:".format(author.id))
+        await message.channel.send("<@{}> is playing fortnite :LOL:".format(author.id))
     await bot.process_commands(message)
 
 @bot.command()
-async def simp(ctx, user: discord.Member):
+async def callOut(ctx, user: discord.Member):
     ident = user.id
     if(ident==591065765185191983):     
-        await ctx.send("<@{}> is a ***SIMP***".format(ctx.message.author.id))
+        await ctx.send("<@{}> WARNING".format(ctx.message.author.id))
     else:
-        await ctx.send("<@{}> is a ***SIMP***".format(ident))
+        await ctx.send("<@{}> WARNING".format(ident))
 
 
 @bot.command(pass_context=True)
@@ -51,7 +51,7 @@ async def timeout(ctx, user: discord.Member):
     member = ctx.message.author
     ident = user.id
 
-    role = discord.utils.find(lambda r: r.name == 'Retard Alert', user.guild.roles)#ctx.message.author.guild.roles)
+    role = discord.utils.find(lambda r: r.name == 'Student', user.guild.roles)#ctx.message.author.guild.roles)
     
     DNC = discord.utils.find(lambda r: r.name == 'Does Not Cap', ctx.message.author.guild.roles)
     admins = discord.utils.find(lambda r: r.name == 'Admins', ctx.message.author.guild.roles)
@@ -60,14 +60,14 @@ async def timeout(ctx, user: discord.Member):
     if(DNC in member.roles or admins in member.roles or decent in member.roles):
         if(ident==591065765185191983):
             await  member.add_roles(role)
-            await ctx.send("You have been assigned the Retard Alert role")
+            await ctx.send("You have been assigned the Student role")
         else:           
             if(role in user.roles):
                 await  user.remove_roles(role)
-                await ctx.send("<@{}> has been unassigned the Retard Alert role".format(ident))
+                await ctx.send("<@{}> has been unassigned the Student role".format(ident))
             else:
                 await  user.add_roles(role)
-                await ctx.send("<@{}> has been assigned the Retard Alert role".format(ident))
+                await ctx.send("<@{}> has been assigned the Student role".format(ident))
     else:
         await ctx.send("Request to Change Role Denied: Invalid Permissions")
 
@@ -98,9 +98,9 @@ async def downbad(ctx, user: discord.Member):
 
 
 @bot.command()
-async def penis(ctx):
+async def angry(ctx):
     await ctx.message.delete()
-    await ctx.send("<:angry_penis:835398771491733515>")
+    await ctx.send("<:angry:835398771491733515>")
     
 
 @bot.command()
@@ -137,7 +137,7 @@ async def purge(ctx, number):
 @bot.command()
 async def commands(ctx):
     embed=discord.Embed(title="Here are my commands", description="""
-**$simp @user**: Makes me respond with the tagged user followed by 'is a ***SIMP***'
+**$callOut @user**: Makes me callout a user'
 **$downbad @user**: Assigns the tagged user the Downbad role
 **$timeout @user**: Assigns the tagged user the Retard Alert role
 **$pfp @user**: Makes me show the tagged user's pfp
